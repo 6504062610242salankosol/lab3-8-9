@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int hour=0,minute=0,second=0,nextt=0,extra_hours=0;;
+	char c;
+	scanf("%d%c%d%c%d",&hour,&c,&minute,&c,&second);
+	printf("Hour:%d\n",hour);
+	printf("Minute:%d\n",minute);
+	printf("second:%d\n",second);
+	scanf("%d",&nextt);
+	
+	minute += nextt;
+	
+	extra_hours = minute / 60; 
+	
+	minute = minute % 60; 
+	
+	hour = (hour + extra_hours) % 24;
+	
+	printf("\n");
+	printf("Hour:%d\n",hour);
+	printf("Minute:%d\n",minute);
+	printf("second:%d\n",second);
+}
